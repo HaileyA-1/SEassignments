@@ -15,7 +15,7 @@
 <body>
     <h1>Birthday Party Registration Form</h1>
     <!--Build your Table and Form here-->
-    <form action="#" method="get">
+    <form action="confirm.html" method="get">
         <table>
             <thead>
                 <tr>
@@ -26,7 +26,100 @@
             <tbody>
                 <tr>
                     <td>Parent/Guardian Name</td>
-                    <td><input type="text" name="text-" id=""></td>
+                    <td>
+                        <input type="text" name="gfirst" id="g-first" maxlength="20" placeholder="First name" required>
+                        <br>
+                        <input type="text" name="glast" id="g-last" maxlength="20" placeholder="Last name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Child's First Name</td>
+                    <td><input type="text" name="cfirst" id="c-first" placeholder="Child's Firstname" required></td>
+                </tr>
+                <tr>
+                    <td>Child's Age</td>
+                    <td><input type="number" name="age" id="age" value="3" required></td>
+                </tr>
+                <tr>
+                    <td><h2>Date and Time</h2></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td><input type="date" name="date" id="date" required></td>
+                </tr>
+                <tr>
+                    <td>Start Time</td>
+                    <td><input type="time" name="time" id="s-time" required></td>
+                </tr>
+                <tr>
+                    <td>Number of Guests</td>
+                    <td><input type="number" name="guests" value="5"></td>
+                </tr>
+                <tr>
+                    <td><h2>Food</h2></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Size</td>
+                    <td>
+                        
+                        <input type="radio" name="size" id="sm" value="sm">
+                        <label for="sm">sm</label>
+                        
+                        <input type="radio" name="size" id="md" value="md">
+                        <label for="md">md</label>
+                        
+                        <input type="radio" name="size" id="lg" value="lg">
+                        <label for="lg">lg</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Drinks</td>
+                    <td>
+                        
+                        <input type="checkbox" name="drink1" id="drink1" value="coke" checked>
+                        <label for="drink1">Coke</label><br>
+                        
+                        <input type="checkbox" name="drink2" id="drink2" value="sprite">
+                        <label for="drink2">Sprite</label><br>
+                        
+                        <input type="checkbox" name="drink3" id="drink3" value="fruit punch">
+                        <label for="drink3">Fruit Punch</label><br>
+                        
+                        <input type="checkbox" name="drink4" id="drink4" value="lemonade">
+                        <label for="drink4">Lemonade</label><br>
+                        
+                        <input type="checkbox" name="drink5" id="drink5" value="iced tea">
+                        <label for="drink5">Iced tea</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cake</td>
+                    <td><select name="cake" id="cake">
+                        <option value="chocolate">Chocolate</option>
+                        <option value="vanilla">Vanilla</option>
+                        <option value="bmo">I'll bring my own</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h2>Decorations</h2></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Color Scheme</td>
+                    <td>Choose a color scheme for the party <br>
+                        <input type="color" name="colors" id="colors">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Additional Comments</td>
+                    <td><textarea name="comments" id="comments" placeholder="Please add any additional comments here"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit"></td>
                 </tr>
             </tbody>
         </table>
