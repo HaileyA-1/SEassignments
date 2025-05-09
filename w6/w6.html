@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Week 6 | JavaScript Lab</title>
+</head>
+
+<body>
+    <h1>Week 6 </h1>
+    <p></p>
+    <button>Click me!</button>
+    <script>
+
+        
+
+        function outputMessage(tag, message, color) {
+            document.querySelector(tag).innerHTML = message;
+            document.querySelector(tag).style.color = color;
+        }
+
+        outputMessage("p", "Week 6 Calculator", "#0000ff");
+
+        var promptButton = document.querySelector("button");
+
+        promptButton.addEventListener("click", dataPrompt);
+
+        function dataPrompt() {
+
+            let firstNumber = prompt("Please give me your hourly pay");
+            let secondNumber = prompt("Please give me your hours worked");
+            let thirdNumber = prompt("Please give me your tax rate");
+
+            let grosspay = Number(firstNumber) * Number(secondNumber) * 2;
+            let uncSam = Number(grosspay) * Number(secondNumber) / 100;
+            let netPay = Number(grosspay) - Number(uncSam);
+            alert(`This is your grosspay: ${grosspay}`)
+            alert(`This is your Uncle Sam's share: ${uncSam}`)
+            alert(`This is your netpay: ${netPay}`)
+
+            //Example of JavaScript creating new elements on a webpage
+            let documentBody = document.querySelector("body");
+            var outputElement = document.createElement("p");
+            var outputData = `The result of your grosspay is: ${grosspay}\n The result of Uncle Sam's share: ${uncSam}\n The result of your netpay: ${netPay}`;
+            var outputHTML = `The result of your grosspay is: ${grosspay}<br>The result of Uncle Sam's share: ${uncSam}<br> The result of your netpay: ${netPay}`;
+            console.log(outputData);
+            outputElement.innerHTML = outputHTML;
+            documentBody.appendChild(outputElement);
+
+        }
+        console.log(grossp);
+        console.log(uncleS);
+
+
+    </script>
+</body>
+
+</html>

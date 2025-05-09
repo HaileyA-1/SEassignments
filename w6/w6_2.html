@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6</title>
+    <style>
+        table,tr,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Week 6</h1>
+    <input type="text" id="pay">
+    <script>
+        var textInput = document.querySelector("#pay");
+        textInput.addEventListener("keyup", function(event){
+            console.log(event.key)
+            event.target.value = "No you can't type"
+        });
+    </script>
+
+    <h1>Calculator</h1>
+    <form action="">
+        <table>
+            <tr>
+                <td><label for="gross">GrossPay: </label></td>
+                <td><input type="text" name="gross" id="gross" placeholder="Type gross pay. . ." required></td>
+            </tr>
+            <tr>
+                <td><label for="unsam">Uncle Sam's pay: </label></td>
+                <td><input type="text" name="unsam" id="unsam" placeholder="payout. . ." required></td>
+            </tr>
+            <tr>
+                <td><label for="net">Age: </label></td>
+                <td><input type="text" name="net" id="net" placeholder="Type net. . ." required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Get calculations!"></td>
+            </tr>
+        </table>
+    </form>
+
+    <div id="display-info">
+        Your info will be displayed here!
+    </div>
+    <script src="js/clac.js"></script>
+</body>
+</html>
